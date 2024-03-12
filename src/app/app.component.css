@@ -1,0 +1,24 @@
+
+main {
+    background: #e0e0e0;
+}
+
+li {
+    border-radius: 30px;
+    background: #e0e0e0;
+    box-shadow:  25px 25px 50px #c3c3c3,
+                -25px -25px 50px #fdfdfd;
+    padding: 20px;
+    margin-top: 2em;
+    margin-bottom: 5em;
+    list-style: none;
+    transition-duration: 200ms;
+}
+
+li:hover {
+    transform: scale(1.01);
+}
+
+hr {
+    background-color: #aaa;
+}
