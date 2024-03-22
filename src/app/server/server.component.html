@@ -1,2 +1,5 @@
-<p>{{ 'Server' }} with the ID {{ serverId }} is {{ serverStatus }}</p>
-<button class="btn btn-primary" [disabled]="allowNewServer">Add Server</button>
+<p 
+    [ngStyle]="{color: getColor()}"
+    [ngClass]="{online: serverStatus === 'online'}">
+    {{ 'Server' }} with the ID {{ serverId }} is {{ serverStatus }}
+</p>
