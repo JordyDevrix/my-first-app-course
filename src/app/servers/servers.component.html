@@ -1,25 +1,35 @@
 <label>Server name</label>
 
-<input type="text" class="form-control" (input)="onUpdateServerName($event)">
-
 <input type="text" class="form-control" [(ngModel)]="serverName">
 
 <p>{{ serverName }}</p>
 
-<button 
-class="btn btn-primary" 
-[disabled]="serverName === ''"
-(click)="onCreateServer()">Add Server</button>
+<div class="btn-group" appDropdown>
+    <button 
+    class="btn btn-primary dropdown-toggle" 
+    [disabled]="serverName === ''"
+    (click)="onCreateServer()">Add Server <span class="caret"></span></button>
+    <ul class="dropdown-menu">
+        <li class="my-list-item">list item</li>
+        <li class="my-list-item">list item</li>
+        <li class="my-list-item">list item</li>
+        <li class="my-list-item">list item</li>
+    </ul>
+</div>
 
 <p *ngIf="serverCreated; else noServer">Server was created, server name is {{ serverName }}</p>
 <ng-template #noServer>
     <p>No server was created</p>
 </ng-template>
 
-<app-server></app-server>
-<app-server></app-server>
-<app-server></app-server>
-<app-server></app-server>
-<app-server></app-server>
-<app-server></app-server>
-<app-server></app-server>
+<!-- <app-server *ngFor="let server of servers"></app-server> -->
+
+<hr>
+
+<ul>
+    @for (server of servers; track $index) {
+        <li style="list-style: none;">
+            <app-server></app-server>
+        </li>
+    }
+</ul>

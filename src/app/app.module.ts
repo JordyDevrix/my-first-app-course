@@ -6,6 +6,7 @@ import { ServerComponent } from './server/server.component';
 import { ServersComponent } from './servers/servers.component';
 import { WarningAlert } from './warningalert/warningalert.component';
 import { SuccesalertComponent } from './succesalert/succesalert.component';
+import { DropdownDirective } from './shared/dropdown.directive';
 
 @NgModule({
   declarations: [
@@ -13,7 +14,8 @@ import { SuccesalertComponent } from './succesalert/succesalert.component';
     AppComponent,
     ServerComponent,
     ServersComponent,
-    SuccesalertComponent
+    SuccesalertComponent,
+    DropdownDirective
   ],
   imports: [
     BrowserModule,

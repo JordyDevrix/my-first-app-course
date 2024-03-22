@@ -11,6 +11,7 @@ export class ServersComponent implements OnInit{
     allowNewServer = true;
     serverName = '';
     serverCreated = false;
+    servers = ['testServer', 'testServer2']
 
     constructor() {
         this.serverStatus = Math.random() > 0.5 ? 'online' : 'offline';
@@ -25,6 +26,7 @@ export class ServersComponent implements OnInit{
 
     onCreateServer() {
         this.serverCreated = true;
+        this.servers.push(this.serverName)
     }
 
     onUpdateServerName(event: any) {
