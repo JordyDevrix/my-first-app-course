@@ -22,10 +22,6 @@ input {
     border: 0px;
 }
 
-input:hover {
-    transform: scale(1.01);
-}
-
 button {
     border-radius: 30px;
     box-shadow:  25px 25px 50px #c3c3c3,
